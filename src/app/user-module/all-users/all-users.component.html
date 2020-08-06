@@ -1,0 +1,10 @@
+<form #form='ngForm' (ngSubmit)="selectUser()">
+  <fieldset>
+    <select name="userId" [(ngModel)]="selectedUser">
+      <option *ngFor="let user of users" value="{{user.id}}">{{user.name}} </option>
+    </select>
+    <button >Select User</button>
+  </fieldset>
+</form>
+<router-outlet></router-outlet>
+
